@@ -11,12 +11,12 @@ import tn.esprit.miafamilia10.fragments.RootFragmentShopList;
 
 public class HomePageTabsAdapter  extends FragmentPagerAdapter {
 
-    private int NUM_ITEMS ;
+    private int NUM_ITEMS=3 ;
 
 
-    public HomePageTabsAdapter(FragmentManager fm ,int NUM_ITEMS) {
+    public HomePageTabsAdapter(FragmentManager fm ) {
         super(fm);
-        this.NUM_ITEMS = NUM_ITEMS;
+
     }
 
 
