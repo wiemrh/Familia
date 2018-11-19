@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.SignupActivity">
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:src="@drawable/familiar"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/emailSignupTxt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:hint=" E-mail" />
+
+        <EditText
+            android:id="@+id/fullNameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10px"
+            android:hint=" Full name" />
+
+
+        <EditText
+            android:id="@+id/pswSignupTxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20px"
+            android:hint=" Password"
+            android:password="true"/>
+
+        <Button
+            android:id="@+id/confirmLogin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="signUp"
+            android:textColor="#ffff"
+            android:text="Sign Up"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="50dp">
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fb_btn_background"
+                android:drawableLeft="@drawable/ic_facebook_login"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Login with Facebook"
+                android:textColor="#ffff"
+                android:onClick="signUpWithFacebook"
+                />
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gmail_btn_background"
+                android:drawableLeft="@drawable/ic_gmail_login"
+                android:paddingLeft="5dp"
+                android:text="Login with Gmail"
+
+                android:textColor="#ffff"
+                android:onClick="signUpWithGmail"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

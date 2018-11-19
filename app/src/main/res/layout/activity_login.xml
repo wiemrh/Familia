@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.LoginActivity">
+
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:src="@drawable/familiar"
+        android:layout_gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp">
+
+        <EditText
+            android:id="@+id/emailLoginTxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="50px"
+            android:hint=" E-mail"
+            android:textSize="15dp"
+            />
+        <EditText
+            android:id="@+id/pswLoginTxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50px"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/confirmLogin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="login"
+            android:textColor="#ffff"
+            android:text="Log in"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/recoverTxtVw"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30dp"
+            android:onClick="resetPassword"
+            android:text="Forgot password?"
+            android:textSize="6pt"
+           />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fb_btn_background"
+                android:drawableLeft="@drawable/ic_facebook_login"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Login with Facebook"
+                android:textColor="#ffff"
+                android:onClick="loginWithFacebook"
+                />
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gmail_btn_background"
+                android:drawableLeft="@drawable/ic_gmail_login"
+                android:paddingLeft="5dp"
+                android:text="Login with Gmail"
+
+                android:textColor="#ffff"
+                android:onClick="loginWithGmail"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
