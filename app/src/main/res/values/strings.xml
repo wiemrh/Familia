@@ -7,4 +7,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string-array name="tasks">
+
+        <item> Task 1 </item>
+        <item> Task 2 </item>
+        <item> Task 3 </item>
+        <item> Task 4 </item>
+
+    </string-array>
+
+    <string-array name="competeOrderby">
+        <item>Latest</item>
+        <item>Solved</item>
+    </string-array>
 </resources>
