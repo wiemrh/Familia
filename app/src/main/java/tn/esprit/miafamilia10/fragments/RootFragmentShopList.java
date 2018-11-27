@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,6 +47,8 @@ public class RootFragmentShopList extends Fragment {
     ArrayAdapter<String> adapter ;
     Gson gson ;
     String newArticle;
+    String pos;
+    Object a;
     public RootFragmentShopList() {
         // Required empty public constructor
     }
@@ -65,12 +68,23 @@ public class RootFragmentShopList extends Fragment {
             public void onClick(View view) {
 
                 newArticle = editTextArticle.getText().toString();
-                new InsertTasks().execute(newArticle);
+
+
+                new InsertArticle().execute(newArticle);
             }
         });
+listArticles.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+         pos = Integer.toString(i);
+        a = listArticles.getItemAtPosition(i);
+        Toast.makeText(getActivity() , a.toString(),Toast.LENGTH_SHORT).show();
+        new SuppArticle().execute(a.toString());
+    }
+});
 
-        new GetAllTasks().execute();
+        new GetAllArticles().execute();
 
 
         return result;
@@ -81,7 +95,7 @@ public class RootFragmentShopList extends Fragment {
 
 
     //1- string enter 2- integer progress 3- string result
-    private class InsertTasks extends AsyncTask<String , Integer, String> {
+    private class InsertArticle extends AsyncTask<String , Integer, String> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -139,7 +153,7 @@ public class RootFragmentShopList extends Fragment {
 
 
 
-    private class GetAllTasks extends AsyncTask<String , Integer, String>{
+    private class GetAllArticles extends AsyncTask<String , Integer, String>{
 
         @Override
         protected void onPreExecute() {
@@ -189,4 +203,70 @@ public class RootFragmentShopList extends Fragment {
             adapter = new ArrayAdapter<>(getActivity() , android.R.layout.simple_list_item_1,articleData);
             listArticles.setAdapter(adapter);
 
-        }}}
+        }}
+
+
+    private class SuppArticle extends AsyncTask<String , Integer, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            Toast.makeText(getActivity() , "Deleting data ...",Toast.LENGTH_SHORT).show();
+
+        }
+
+        @Override
+        protected String doInBackground(String... strings) {
+            //1--make connection with database (web service)
+
+
+
+
+
+            try {
+
+
+                URL url = new URL("http://10.0.2.2/familiaapp/suppressionArticle.php?id="+strings[0]);//strings elli f doinbackground
+                URLConnection urlConnection = url.openConnection();
+                InputStreamReader inputStreamReader = new InputStreamReader(urlConnection.getInputStream());
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String ligne;
+                while((ligne = bufferedReader.readLine())!=null){
+                    jsonObject = new JSONObject(ligne);
+                }
+                Log.d("result : ",jsonArray.toString());
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            try {
+                boolean isDeleted = jsonObject.getBoolean("result");
+
+
+
+               articleData.remove(a.toString());
+                adapter.notifyDataSetChanged();
+                if(isDeleted){
+                    Toast.makeText(getActivity(), "the article deleted with success", Toast.LENGTH_SHORT).show();
+                  //  editTextArticle.setText("");
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+}

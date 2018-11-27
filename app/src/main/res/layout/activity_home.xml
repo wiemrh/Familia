@@ -1,55 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-    tools:context=".Activities.HomeActivity">
-
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/btColor"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
-
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/btColor"
-        app:tabSelectedTextColor="@android:color/black"
-        app:tabTextColor="@android:color/white">
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/tabHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Home" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/tabChat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chat" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/tabShopList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Shooping List" />
+        android:layout_height="match_parent"
+        tools:context=".Activities.HomeActivity">
 
 
-
-        </android.support.design.widget.TabLayout>
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:id="@+id/container">
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relLayoutParent">
+
+
+            <!-- top toolbar -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relLayout1">
+
+                <include layout="@layout/layout_top_tabs"/>
+
+            </RelativeLayout>
+
+            <!-- Middle section (body) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relLayout2"
+                android:layout_below="@+id/relLayout1">
+
+                <include layout="@layout/layout_center_viewpager"/>
+
+
+            </RelativeLayout>
+
+
+            <!-- bottom navigation -->
+            <include layout="@layout/layout_bottom_navigation_view"/>
+
+
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
