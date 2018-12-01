@@ -1,4 +1,4 @@
-package tn.esprit.miafamilia10.fragments;
+package tn.esprit.miafamilia10.fragments.todolist;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import tn.esprit.miafamilia10.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RootFragmentProfil extends Fragment {
+public class RootFragmentToRemember extends Fragment {
 
 
-    public RootFragmentProfil() {
+    public RootFragmentToRemember() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class RootFragmentProfil extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.root_fragment_profil, container, false);
+        return inflater.inflate(R.layout.root_fragment_to_remember, container, false);
     }
 
 }

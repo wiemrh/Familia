@@ -15,7 +15,7 @@ import tn.esprit.miafamilia10.R;
 import tn.esprit.miafamilia10.fragments.RootFragmentHome;
 import tn.esprit.miafamilia10.fragments.RootFragmentProfil;
 import tn.esprit.miafamilia10.fragments.RootFragmentSearch;
-import tn.esprit.miafamilia10.fragments.todolist.RootFragmentShopList;
+import tn.esprit.miafamilia10.fragments.todolist.RootFragmentToDoListCategory;
 
 
 public class HomeActivity extends AppCompatActivity {
@@ -54,7 +54,7 @@ public class HomeActivity extends AppCompatActivity {
                             selectedFragment = new RootFragmentSearch();
                             break;
                         case R.id.ic_todolist:
-                            selectedFragment = new RootFragmentShopList();
+                            selectedFragment = new RootFragmentToDoListCategory();
                             break;
                         case R.id.ic_profil:
                             selectedFragment = new RootFragmentProfil();

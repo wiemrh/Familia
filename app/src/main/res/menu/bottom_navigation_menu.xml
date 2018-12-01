@@ -17,7 +17,7 @@
     <item
         android:id="@+id/ic_todolist"
         android:icon="@drawable/ic_todo_list_black_24dp"
-        android:title="Doto list">
+        android:title="category list">
     </item>
 
 

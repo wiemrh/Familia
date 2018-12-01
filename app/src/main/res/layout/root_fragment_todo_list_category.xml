@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:id="@+id/content_list_shop"
-    tools:context=".fragments.todolist.RootFragmentShopList">
+    tools:context=".fragments.todolist.RootFragmentToDoListCategory">
 
     <!-- TODO: Update blank fragment layout -->
     <Button
@@ -20,17 +20,17 @@
         android:textColor="@color/white"
         android:text="TODO"/>
     <Button
+        android:id="@+id/torememberlistbt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-
         android:background="@drawable/rounded_button"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:text="TO Remember "/>
     <Button
+        android:id="@+id/tocalllistbt"
         android:layout_width="match_parent"
-
         android:layout_margin="20dp"
         android:background="@drawable/rounded_button"
         android:textColor="@color/white"
@@ -39,6 +39,7 @@
         android:text="TO call"/>
 
     <Button
+        android:id="@+id/tovisitlistbt"
         android:layout_width="match_parent"
         android:background="@drawable/rounded_button"
         android:layout_margin="20dp"
