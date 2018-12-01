@@ -12,10 +12,10 @@ import tn.esprit.miafamilia10.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RootFragmentChat extends Fragment {
+public class RootFragmentProfil extends Fragment {
 
 
-    public RootFragmentChat() {
+    public RootFragmentProfil() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class RootFragmentChat extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_root_chat, container, false);
+        return inflater.inflate(R.layout.fragment_root_fragment_profil, container, false);
     }
 
 }

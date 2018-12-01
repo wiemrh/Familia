@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.RootFragmentShopList">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/content_list_shop"
+    tools:context=".fragments.todolist.RootFragmentShopList">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:id="@+id/layoutAd"
+    <Button
+        android:id="@+id/todolistbt"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_button"
+        android:textSize="20dp"
 
-        <EditText
-            android:id="@+id/etArticle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:hint="new Article here ... "
-            />
-
-        <Button
-            android:id="@+id/btAdd"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cerclebt"
-            android:textColor="#ffff"
-            android:layout_weight="1"
-            android:text="add"
-            />
-
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/listArticles"
+        android:textColor="@color/white"
+        android:text="TODO"/>
+    <Button
         android:layout_width="match_parent"
-        android:paddingTop="10dp"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/layoutAd"
-        android:entries="@array/tasks">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
 
-    </ListView>
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="TO Remember "/>
+    <Button
+        android:layout_width="match_parent"
 
-</RelativeLayout>
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="TO call"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_button"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="TO visit"/>
+
+</LinearLayout>
