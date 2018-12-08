@@ -1,4 +1,4 @@
-package tn.esprit.miafamilia10.fragments.todolist;
+package tn.esprit.miafamilia10.fragments.list;
 
 
 import android.os.Bundle;
@@ -9,6 +9,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import tn.esprit.miafamilia10.R;
+import tn.esprit.miafamilia10.fragments.list.tocall.RootFragmentToCall;
+import tn.esprit.miafamilia10.fragments.list.todo.RootFragmentTodo;
+import tn.esprit.miafamilia10.fragments.list.toremember.RootFragmentToRemember;
+import tn.esprit.miafamilia10.fragments.list.tovisit.RootFragmentToVisit;
 
 
 /**
@@ -55,7 +59,7 @@ public class RootFragmentToDoListCategory extends Fragment {
 
             }
         });
-        // remember fragment
+        // toremember fragment
         torememberBt =result.findViewById(R.id.torememberlistbt);
         torememberBt.setOnClickListener(new View.OnClickListener() {
             @Override

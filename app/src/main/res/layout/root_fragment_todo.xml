@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.todolist.RootFragmentTodo">
+    tools:context=".fragments.list.todo.RootFragmentTodo">
 
     <!-- TODO: Update blank fragment layout -->
     <ListView
@@ -21,5 +21,20 @@
         android:layout_centerInParent="true"
         android:visibility="visible"
         />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/btColor"
+        android:clickable="true"
+        android:src="@drawable/ic_add_black_24dp" />
+
+
 
 </RelativeLayout>

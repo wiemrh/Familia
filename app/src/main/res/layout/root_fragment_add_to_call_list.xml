@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:id="@+id/activity_main"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:padding="15dp"
+     android:gravity="center"
+    tools:context=".fragments.list.tocall.RootFragmentAddToCallList">
+
+     <TextView
+         android:text="Add a new task "
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:gravity="center"
+         android:textSize="30dp"
+         android:textStyle="bold"
+         android:textColor="#000"
+         android:layout_marginTop="40dp"
+         android:id="@+id/textView" />
+
+     <EditText
+         android:layout_width="fill_parent"
+         android:layout_height="50dp"
+         android:textColor="#000"
+         android:background="#fff"
+         android:inputType="textPersonName"
+         android:gravity="center"
+         android:hint="Enter contact person"
+         android:textColorHint="#000"
+         android:ems="10"
+         android:layout_below="@+id/textView"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="20dp"
+         android:id="@+id/addContactName" />
+
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textColor="#000"
+        android:background="#fff"
+        android:textColorHint="#000"
+        android:gravity="center"
+        android:hint="Enter a phone number "
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/addContactName"
+        android:inputType="number" />
+
+
+     <EditText
+         android:layout_width="fill_parent"
+         android:layout_height="90dp"
+         android:textColor="#000"
+         android:background="#fff"
+         android:textColorHint="#000"
+         android:inputType="textMultiLine"
+         android:gravity="center"
+         android:hint="Enter a description"
+         android:ems="10"
+         android:layout_below="@+id/phoneNumber"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="20dp"
+         android:id="@+id/Description" />
+
+     <Button
+         android:text="Add"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+         android:textColor="#000"
+         android:textSize="20dp"
+         android:background="@drawable/itemoflistv"
+         android:layout_below="@+id/Description"
+         android:id="@+id/buttonSubmittocall" />
+
+
+
+
+</RelativeLayout>

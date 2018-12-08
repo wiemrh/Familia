@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.todolist.RootFragmentToVisit">
+    tools:context=".fragments.list.tovisit.RootFragmentToVisit">
 
     <!-- TODO: Update blank fragment layout -->
     <ListView
@@ -14,12 +14,27 @@
         android:id="@+id/tovisitlist"/>
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBartovisit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/btColor"
         android:layout_centerInParent="true"
         android:visibility="visible"
         />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addbttov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/btColor"
+        android:clickable="true"
+        android:src="@drawable/ic_add_black_24dp" />
+
+
 
 </RelativeLayout>

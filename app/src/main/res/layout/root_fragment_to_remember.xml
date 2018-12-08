@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.todolist.RootFragmentToRemember">
-
-    <!-- TODO: Update blank fragment layout -->
-    <ListView
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/torememberlist"/>
+        tools:context=".fragments.list.toremember.RootFragmentToRemember">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/btColor"
-        android:layout_centerInParent="true"
-        android:visibility="visible"
-        />
+        <!-- TODO: Update blank fragment layout -->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/torememberlist"/>
 
-</RelativeLayout>
+        <ProgressBar
+            android:id="@+id/progressBarToR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/btColor"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addbttorememberlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="@color/btColor"
+            android:clickable="true"
+            android:src="@drawable/ic_add_black_24dp" />
+
+
+
+    </RelativeLayout>
+

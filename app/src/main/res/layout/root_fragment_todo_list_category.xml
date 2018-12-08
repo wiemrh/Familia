@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:id="@+id/content_list_shop"
-    tools:context=".fragments.todolist.RootFragmentToDoListCategory">
+    tools:context=".fragments.list.RootFragmentToDoListCategory">
 
     <!-- TODO: Update blank fragment layout -->
     <Button
@@ -18,7 +18,7 @@
         android:textSize="20dp"
 
         android:textColor="@color/white"
-        android:text="TODO"/>
+        android:text="TO DO"/>
     <Button
         android:id="@+id/torememberlistbt"
         android:layout_width="match_parent"

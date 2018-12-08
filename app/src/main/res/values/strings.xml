@@ -20,4 +20,5 @@
         <item>Latest</item>
         <item>Solved</item>
     </string-array>
+    <string name="title_activity_listview_item">listview_item</string>
 </resources>

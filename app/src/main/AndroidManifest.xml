@@ -32,6 +32,10 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
+        <activity
+            android:name=".listview_item"
+            android:label="@string/title_activity_listview_item"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
